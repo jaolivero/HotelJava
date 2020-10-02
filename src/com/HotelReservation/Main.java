@@ -5,11 +5,14 @@ import java.util.Date;
 public class Main {
 
     public static void main(String[] args) {
-	Room myRoom = new Room(101, "single", (byte) 3, false, false, "Joel Olivero", 30.25f);
-        myRoom.reserve(102, "John Smith");
+	Room myRoom = new Room(0, "single", (byte) 3, false, false, "", 19.99F);
+	myRoom.reserve(102, "Joel Olivero");
+        System.out.println(myRoom.getIsOccupied());
+        System.out.println(myRoom.checkout(3));
         System.out.println(myRoom.number);
 //        Date now = new Date();
 //        System.out.println(now);
+
 
 //        System.out.println(myRoom);
     }
