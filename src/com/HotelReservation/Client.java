@@ -8,12 +8,17 @@ public class Client {
     String phoneNumber = "";
     int roomNumber;
     int roomType;
+    private Room room;
 
     public void makePayment() {
 
     }
 
     public void charge() {
+
+    }
+
+    public void outstandingBalance() {
 
     }
 
