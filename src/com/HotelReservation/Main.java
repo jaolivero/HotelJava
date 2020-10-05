@@ -10,10 +10,5 @@ public class Main {
         System.out.println(myRoom.getIsOccupied());
         System.out.println(myRoom.checkout(3));
         System.out.println(myRoom.number);
-//        Date now = new Date();
-//        System.out.println(now);
-
-
-//        System.out.println(myRoom);
     }
 }

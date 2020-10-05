@@ -22,9 +22,6 @@ public class Room {
         this.costPerNight = costPerNight;
     }
 
-    beds.put("single", 1);
-
-
     public void reserve(int roomNumber, String customer) {
         if (isOccupied && needsCleaning == true) {
             System.out.println("Room is unavailable");

@@ -7,28 +7,22 @@ public class Client {
     private float prepaid = 0;
     private String phoneNumber = "";
     private int roomNumber;
-    priavte int roomType;
+    private int roomType;
     private Room room;
 
-    public void makePayment() {
-
+    public void makePayment(float amount) {
+        if (currentBill > 0) {
+            currentBill = -amount;
+        }
+        System.out.println("There is no outstanding balance");
     }
 
-    public void charge() {
-
+    public void chargeRoom(float charge) {
+        currentBill =+ charge;
+        System.out.println("your balance is now " + currentBill);
     }
 
-    public void outstandingBalance() {
-
+    public float getOutstandingBalance() {
+        return currentBill;
     }
-
-
-//    @Override
-//    public void reserve (int amt) {
-//        return;
-//    }
-//
-//    @Override
-//    public void checkout() {
-//
-    }
+}
