@@ -7,7 +7,7 @@ public class Client {
     private float prepaid = 0;
     private String phoneNumber = "";
     private int roomNumber;
-    private int roomType;
+    private String roomType;
     private Room room;
 
     public void makePayment(float amount) {
@@ -24,5 +24,13 @@ public class Client {
 
     public float getOutstandingBalance() {
         return currentBill;
+    }
+
+    public void SetRoomType() {
+        if (roomNumber < 10) {
+            this.roomType = "Standard";
+        } else {
+            this.roomType = "Suite";
+        }
     }
 }

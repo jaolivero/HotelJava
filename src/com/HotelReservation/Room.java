@@ -5,17 +5,15 @@ import java.util.HashMap;
 public class Room {
     public int number;
     public String type;
-    public byte floor;
     private boolean isOccupied;
     private boolean needsCleaning;
     private String occupant;
     private float costPerNight;
     HashMap<String, Integer> beds = new HashMap<String, Integer>();
 
-    public Room (int number, String type, byte floor, boolean isOccupied, boolean needsCleaning, String occupant, float costPerNight) {
+    public Room (int number, String type, boolean isOccupied, boolean needsCleaning, String occupant, float costPerNight) {
         this.number = number;
         this.type = type;
-        this.floor = floor;
         this.isOccupied = isOccupied;
         this.needsCleaning = needsCleaning;
         this.occupant = occupant;
