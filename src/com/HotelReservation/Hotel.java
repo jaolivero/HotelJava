@@ -14,8 +14,8 @@ public class Hotel {
     HashMap<Integer, Boolean> Rooms = new HashMap<Integer, Boolean>();
 
 
-    public Hotel(int availiableStandard, String reservedStandards, int avaliableSuites, int reservedSuites, List<Client> clients) {
-        this.availableStandard = availiableStandard;
+    public Hotel(int availableStandard, String reservedStandards, int avaliableSuites, int reservedSuites, List<Client> clients) {
+        this.availableStandard = availableStandard;
         this.reservedStandards = reservedStandards;
         this.availableSuites = avaliableSuites;
         this.reservedSuites = reservedSuites;
