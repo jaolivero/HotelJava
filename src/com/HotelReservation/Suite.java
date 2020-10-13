@@ -10,11 +10,9 @@ public class Suite extends Room {
     }
 
     @Override
-    public void checkout(int nights) {
-        checkout(needsRestock = true);
+    public float checkout(int nights) {
+        needsRestock = true;
+        float totalCost = costPerNight * nights;
+        return totalCost;
     }
-
-    private void checkout(boolean b) {
-    }
-
 }

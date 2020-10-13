@@ -8,7 +8,7 @@ public class Room {
     private boolean isOccupied;
     private boolean needsCleaning;
     private String occupant;
-    private float costPerNight;
+    public float costPerNight;
     HashMap<String, Integer> beds = new HashMap<String, Integer>();
 
     public Room (int number, String type, boolean isOccupied, boolean needsCleaning, String occupant, float costPerNight) {
@@ -30,15 +30,14 @@ public class Room {
         }
     }
 
-    public void checkout(int nights) {
+    public float checkout(int nights) {
         occupant = "";
         isOccupied = false;
         needsCleaning = true;
         float totalCost = costPerNight * nights;
 
         System.out.println("Your total cost will be..." + totalCost );
-        System.out.println(beds);
-
+        return totalCost;
     }
 
     public void clean (){
