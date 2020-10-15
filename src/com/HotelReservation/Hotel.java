@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Hotel {
-    public int hotelRooms = 20;
+    final static byte hotelRooms = 20;
     int availableStandard;
     String reservedStandards;
     int availableSuites;
@@ -14,10 +14,10 @@ public class Hotel {
     HashMap<Integer, Boolean> Rooms = new HashMap<Integer, Boolean>();
 
 
-    public Hotel(int availableStandard, String reservedStandards, int avaliableSuites, int reservedSuites, List<Client> clients) {
+    public Hotel(int availableStandard, String reservedStandards, int availableSuites, int reservedSuites, List<Client> clients) {
         this.availableStandard = availableStandard;
         this.reservedStandards = reservedStandards;
-        this.availableSuites = avaliableSuites;
+        this.availableSuites = availableSuites;
         this.reservedSuites = reservedSuites;
         this.clients = clients;
     }

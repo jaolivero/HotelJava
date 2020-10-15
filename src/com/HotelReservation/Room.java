@@ -7,6 +7,8 @@ public class Room {
     public String type;
     private boolean isOccupied;
     private boolean needsCleaning;
+
+
     private String occupant;
     public float costPerNight;
     HashMap<String, Integer> beds = new HashMap<String, Integer>();
@@ -48,4 +50,7 @@ public class Room {
         return isOccupied;
     }
 
+    public String getOccupant() {
+        return occupant;
+    }
 }
