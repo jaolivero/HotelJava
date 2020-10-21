@@ -1,23 +1,22 @@
 package com.HotelReservation;
 
 import java.util.HashMap;
+import java.text.NumberFormat;
 
 public class Room {
     public int number;
     public String type;
-    private boolean isOccupied;
-    private boolean needsCleaning;
+    private boolean isOccupied = false;
+    private boolean needsCleaning = false;
 
 
     private String occupant;
     public float costPerNight;
     HashMap<String, Integer> beds = new HashMap<String, Integer>();
 
-    public Room (int number, String type, boolean isOccupied, boolean needsCleaning, String occupant, float costPerNight) {
+    public Room (int number, String type,  String occupant, float costPerNight) {
         this.number = number;
         this.type = type;
-        this.isOccupied = isOccupied;
-        this.needsCleaning = needsCleaning;
         this.occupant = occupant;
         this.costPerNight = costPerNight;
     }
@@ -42,15 +41,11 @@ public class Room {
         return totalCost;
     }
 
-    public void clean (){
+    public void cleaned (){
         needsCleaning = false;
     }
 
     public boolean getIsOccupied() {
         return isOccupied;
-    }
-
-    public String getOccupant() {
-        return occupant;
     }
 }
