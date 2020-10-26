@@ -11,6 +11,7 @@ public class Hotel {
     int reservedSuites;
     private List<Client> clients;
 
+    // add room instead of boolean
     HashMap<Integer, Boolean> Rooms = new HashMap<Integer, Boolean>();
 
 

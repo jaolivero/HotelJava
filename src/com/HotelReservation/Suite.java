@@ -13,6 +13,7 @@ public class Suite extends Room {
     public float checkout(int nights) {
         needsRestock = true;
         float totalCost = costPerNight * nights;
+        System.out.println("Your final balance will be " + totalCost);
         return totalCost;
     }
 }
