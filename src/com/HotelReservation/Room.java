@@ -7,34 +7,31 @@ public class Room {
     public int number;
     public String type;
     private boolean isOccupied = false;
-    private boolean needsCleaning = false;
-
-
-    private String occupant;
-    public float costPerNight;
+    private boolean isNeedsCleaning = false;
+    private Client occupant;
+    public float costPerNight = 19.99F;
     HashMap<String, Integer> beds = new HashMap<String, Integer>();
 
-    public Room (int number, String type,  String occupant, float costPerNight) {
-        this.number = number;
+    public Room (int number, String type,  Client occupant) {
+        this.number = occupant.getRoomNumber();
         this.type = type;
         this.occupant = occupant;
-        this.costPerNight = costPerNight;
     }
 
-    public void reserve(int roomNumber, String customer) {
-        if (isOccupied && needsCleaning == true) {
+    public void reserve(int roomNumber, Client occupant) {
+        if (isOccupied && isNeedsCleaning == true) {
             System.out.println("Room is unavailable");
         } else {
             isOccupied = true;
-            occupant = customer;
+            this.occupant = occupant;
             System.out.println("Congrats!! Check-in is at 3pm");
         }
     }
 
     public float checkout(int nights) {
-        occupant = "";
+        occupant = null;
         isOccupied = false;
-        needsCleaning = true;
+        isNeedsCleaning = true;
         float totalCost = costPerNight * nights;
 
         System.out.println("Your total cost will be..." + totalCost );
@@ -42,10 +39,19 @@ public class Room {
     }
 
     public void cleaned (){
-        needsCleaning = false;
+        isNeedsCleaning = false;
+    }
+
+    public Client getOccupant() {
+        return occupant;
     }
 
     public boolean getIsOccupied() {
         return isOccupied;
+    }
+
+    @Override
+    public String toString() {
+        return occupant.getName();
     }
 }

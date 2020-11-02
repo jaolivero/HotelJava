@@ -8,7 +8,14 @@ public class Client {
     private String phoneNumber = "";
     private int roomNumber;
     private String roomType;
-    private Room room;
+
+    public Client (String name, int partySize, float prepaid, String phoneNumber, int roomNumber ) {
+        this.name = name;
+        this.partySize = partySize;
+        this.prepaid = prepaid;
+        this.phoneNumber = phoneNumber;
+        this.roomNumber = roomNumber;
+    }
 
     public void makePayment(float amount) {
         if (currentBill > 0) {
@@ -26,11 +33,19 @@ public class Client {
         return currentBill;
     }
 
-    public void SetRoomType() {
+    public void setRoomType() {
         if (roomNumber < 10) {
             this.roomType = "Standard";
         } else {
             this.roomType = "Suite";
         }
+    }
+
+    public int getRoomNumber() {
+        return roomNumber;
+    }
+
+    public String getName() {
+        return name;
     }
 }

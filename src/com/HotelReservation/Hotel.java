@@ -14,7 +14,6 @@ public class Hotel {
     // add room instead of boolean
     HashMap<Integer, Boolean> Rooms = new HashMap<Integer, Boolean>();
 
-
     public Hotel(int availableStandard, String reservedStandards, int availableSuites, int reservedSuites, List<Client> clients) {
         this.availableStandard = availableStandard;
         this.reservedStandards = reservedStandards;
@@ -22,9 +21,18 @@ public class Hotel {
         this.reservedSuites = reservedSuites;
         this.clients = clients;
     }
+
     public void addRoom() {
-        for (int i = 0; i < hotelRooms; i ++){
+        for (int i = 0; i < hotelRooms; i++) {
             Rooms.put(i, true);
         }
+    }
+
+    public void addClient(Client client) {
+
+    }
+
+    public void reserveRoom() {
+
     }
 }
