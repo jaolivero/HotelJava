@@ -1,13 +1,11 @@
 package com.HotelReservation;
 
-
 public class Suite extends Room {
     boolean restock = false;
     boolean kitchenette = false;
 
     public Suite(int number, String type, Client occupant, float costPerNight) {
         super(number, "Suite",  occupant);
-
     }
 
     @Override
@@ -21,4 +19,7 @@ public class Suite extends Room {
     public void restock() {
         this.restock = false;
     }
+
+    @Override
+    public
 }
