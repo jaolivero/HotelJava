@@ -1,25 +1,21 @@
 package com.HotelReservation;
 
-public class Suite extends Room {
+public class Suite extends StandardRoom {
     boolean restock = false;
     boolean kitchenette = false;
 
-    public Suite(int number, String type, Client occupant, float costPerNight) {
-        super(number, "Suite",  occupant);
+    public Suite(int number, String type, Client occupant, int rooms, byte beds, boolean kitchenette) {
+        super( number, "Suite", occupant, 30000, rooms, beds);
+        this.kitchenette = kitchenette;
     }
 
     @Override
     public float checkout(int nights) {
         restock();
-        float totalCost = costPerNight * nights;
-        System.out.println("Your final balance will be " + totalCost);
-        return totalCost;
+       super.checkout(nights);
     }
 
     public void restock() {
         this.restock = false;
     }
-
-    @Override
-    public
 }

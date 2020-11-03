@@ -2,13 +2,13 @@ package com.HotelReservation;
 
 public class Client {
     private String name;
-    private int partySize = 1;
+    private byte partySize = 1;
     private float currentBill = 0;
     private float prepaid = 0;
     private String phoneNumber = "";
     private int roomNumber;
 
-    public Client (String name, int partySize, float prepaid, String phoneNumber, int roomNumber ) {
+    public Client (String name, byte partySize, float prepaid, String phoneNumber, int roomNumber ) {
         this.name = name;
         this.partySize = partySize;
         this.prepaid = prepaid;
@@ -40,7 +40,7 @@ public class Client {
         return name;
     }
 
-    public int getPartySize() {
+    public byte getPartySize() {
         return partySize;
     }
 }
